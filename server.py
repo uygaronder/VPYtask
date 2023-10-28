@@ -25,14 +25,6 @@ headers = {
 response = requests.request("POST", url, json=payload, headers=headers)
 access_token = response.json()["oauth"]["access_token"]
 
-## temp read csv
-import csv
-
-with open('vehicles.csv', newline='') as csvfile:
-    csv_data = csvfile.read()
-    vehicles = {'file': ('vehicles.csv', csv_data)}
-## temp read csv
-
 @app.post("/vehicles")
 async def create_vehicle(file: UploadFile = File(...)):
     contents = await file.read()

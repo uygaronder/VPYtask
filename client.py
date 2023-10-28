@@ -3,8 +3,6 @@
 # Usage: python client.py -k <keys> -c
 # Keys: Keys to include as additional columns in the output Excel file
 # Colored: Flag to indicate whether to color each row depending on the age of the hu field
-# Example: python client.py -k 'make' 'model' 'color' -c
-# Example to make it not colored (default): python client.py -k 'make' 'model' 'color'
 
 import argparse
 import csv
